@@ -1,0 +1,24 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2.1'
+}
+
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+
+// We currently have no main class
+//apply plugin: 'application'
+
+// source and source level
+sourceCompatibility = 1.8
+version = '1.0'
+// mainClassName = "Main"
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenCentral()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
